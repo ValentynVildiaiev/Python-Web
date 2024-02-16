@@ -1,7 +1,9 @@
 from pages.base_page import BasePage
+from pages.expenses_page import ExpensesPage
 from pages.garage_page import GaragePage
 from utils.locators import LoginPageLocators
 from utils import users
+import time
 
 
 class LoginPage(BasePage):
@@ -23,11 +25,12 @@ class LoginPage(BasePage):
         print(user)
         self.enter_email(user["email"])
         self.enter_password(user["password"])
+        time.sleep(2)
         self.click_login_button()
 
     def login_with_valid_user(self, user):
         self.login(user)
-        return GaragePage(self.driver)
+        return ExpensesPage(self.driver)
 
     def login_with_in_valid_user(self, user):
         self.login(user)

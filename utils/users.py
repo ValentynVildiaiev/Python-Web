@@ -1,7 +1,9 @@
 from operator import itemgetter
 
+from utils.util import get_number
+
 users = [
-    {"name": "valid_user", "email": "yuri.gr.bond@gmail.com", "password": "E5YvjATAPb7@Uz4"},
+    {"name": "validuser", "email": f"gatsugame@gmail.com", "password": "Zimba1434"},
 ]
 
 
